@@ -1,0 +1,439 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Japanese resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#include ""res\\Tetris.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // 標準コンポーネント\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Tetris.ico"
+IDI_ICON_PURPLE         ICON                    "res\\icon\\russpurple.ico"
+IDI_ICON_CHOCA          ICON                    "res\\icon\\russpurpleChoca.ico"
+IDI_ICON_SWEETS         ICON                    "res\\icon\\russSweets.ico"
+IDI_ICON_FRUIT          ICON                    "res\\icon\\russFruit.ico"
+IDI_ICON_ANIMAL         ICON                    "res\\icon\\russAnimal.ico"
+IDI_ICON_HEART          ICON                    "res\\icon\\russHeart.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "バージョン情報 Tetris"
+FONT 9, "MS UI Gothic", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Tetris Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_TETRIS_DIALOG DIALOGEX 0, 0, 291, 398
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "テトリス"
+FONT 9, "MS UI Gothic", 0, 0, 0x1
+BEGIN
+    CONTROL         "Radio1",IDC_RADIO_REC,"Button",BS_AUTORADIOBUTTON | 
+                    BS_ICON | WS_GROUP,238,46,30,16
+    CONTROL         "Radio2",IDC_RADIO_CHOCA,"Button",BS_AUTORADIOBUTTON | 
+                    BS_ICON | WS_GROUP,238,74,30,19
+    CONTROL         "Radio5",IDC_RADIO_SWEETS,"Button",BS_AUTORADIOBUTTON | 
+                    BS_ICON,238,107,28,18
+    CONTROL         "Radio6",IDC_RADIO_FRUIT,"Button",BS_AUTORADIOBUTTON | 
+                    BS_ICON,238,136,30,25
+    CONTROL         "Radio1",IDC_RADIO_HEART,"Button",BS_AUTORADIOBUTTON | 
+                    BS_ICON,239,168,31,24
+    CONTROL         "X 1",IDC_RADIO_SIZE1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,238,244,33,10
+    CONTROL         "X 2",IDC_RADIO_SIZE2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,238,264,33,10
+    GROUPBOX        "Category",IDC_STATIC,230,30,47,174
+    GROUPBOX        "Block Size",IDC_STATIC,232,224,39,64
+    PUSHBUTTON      "スコア",IDC_BTN_SCORE,42,373,20,14,NOT WS_TABSTOP
+    PUSHBUTTON      "一時停止",IDC_BTN_PAUSE,70,373,32,14,NOT WS_TABSTOP
+    PUSHBUTTON      "背景ミュージック...",IDC_BTN_MUSIC,109,373,54,14,NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "開始",IDC_BUTTON_END,18,373,19,14
+    CONTROL         "",IDC_RUSS_BKPIC,"Static",SS_WHITEFRAME | SS_SUNKEN | 
+                    WS_BORDER,15,14,206,353
+    CONTROL         "",IDC_RUSS_ANIMATE,"SysAnimate32",ACS_AUTOPLAY | NOT 
+                    WS_VISIBLE | WS_BORDER | WS_TABSTOP,21,283,192,34
+    CONTROL         "",IDC_RUSS_PIC1,"Static",SS_BITMAP,20,273,13,14,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_RUSS_PIC2,"Static",SS_BITMAP,84,273,13,14
+    CONTROL         "",IDC_RUSS_PIC3,"Static",SS_BITMAP,144,273,13,14
+    CONTROL         "",IDC_RUSS_PIC4,"Static",SS_BITMAP,85,307,13,14
+    PUSHBUTTON      "停止",IDC_BTN_STOP,169,373,19,14
+END
+
+IDD_DIALOG_HIGHSCORE DIALOGEX 0, 0, 132, 102
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "ハイスコア"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,17,68,36,14
+    PUSHBUTTON      "クリア",IDC_BTN_CLRSCORE,61,68,37,14
+    LTEXT           "スコア：",IDC_STATIC,19,21,22,8
+    LTEXT           "0",IDC_STATIC_SCORE,47,20,29,8
+    LTEXT           "レベル：",IDC_STATIC,18,35,24,8
+    LTEXT           "1",IDC_STATIC_LEVEL,45,34,8,8
+    LTEXT           "名前：",IDC_STATIC,16,48,21,8
+    LTEXT           "なし",IDC_STATIC_NAME,45,47,41,8
+END
+
+IDD_DIALOG_INPUTNAME DIALOGEX 0, 0, 176, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "名前入力"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,40,54,35,14
+    PUSHBUTTON      "Cancel",IDCANCEL,86,54,33,14
+    LTEXT           "名前を入力してください：",IDC_STATIC,41,15,76,13
+    EDITTEXT        IDC_EDIT_NAME,41,31,81,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041103a4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <会社名>"
+            VALUE "FileDescription", "TODO: <ファイルの説明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Tetris.exe"
+            VALUE "LegalCopyright", "TODO: (C) <会社名>.  All rights reserved."
+            VALUE "OriginalFilename", "Tetris.exe"
+            VALUE "ProductName", "TODO: <製品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 932
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_TETRIS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 284
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 394
+    END
+
+    IDD_DIALOG_HIGHSCORE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_DIALOG_INPUTNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 169
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_DLGRUSSSCORE   HTML                    "DlgRussScore.htm"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_RUSS_BLUE           BITMAP                  "res\\image\\russblue.bmp"
+IDB_RUSS_GREEN          BITMAP                  "res\\image\\russgreen.bmp"
+IDB_RUSS_GREY           BITMAP                  "res\\image\\russgrey.bmp"
+IDB_RUSS_HUMANBLUE      BITMAP                  "res\\image\\russhumanblue.bmp"
+IDB_RUSS_HUMANRED       BITMAP                  "res\\image\\russhumanred.bmp"
+IDB_RUSS_ORANGE         BITMAP                  "res\\image\\russorange.bmp"
+IDB_RUSS_PURPLE         BITMAP                  "res\\image\\russpurple.bmp"
+IDB_RUSS_RED            BITMAP                  "res\\image\\russred.bmp"
+IDB_RUSS_SCORE          BITMAP                  "res\\image\\russgame.bmp"
+IDB_RUSS_SEABLUE        BITMAP                  "res\\image\\russseablue.bmp"
+IDB_RUSS_THINBLUE       BITMAP                  "res\\image\\russthinblue.bmp"
+IDB_RUSS_THINGREEN      BITMAP                  "res\\image\\russthingreen.bmp"
+IDB_RUSS_THINPURPLE     BITMAP                  "res\\image\\russthinpurple.bmp"
+IDB_RUSS_WHITE          BITMAP                  "res\\image\\russwhite.bmp"
+IDB_RUSS_YELLOW         BITMAP                  "res\\image\\russyellow.bmp"
+IDB_RUSS_CHOCA1         BITMAP                  "res\\image\\chocalate\\choca1.bmp"
+IDB_RUSS_CHOCA2         BITMAP                  "res\\image\\chocalate\\choca2.bmp"
+IDB_RUSS_CHOCA3         BITMAP                  "res\\image\\chocalate\\choca3.bmp"
+IDB_RUSS_CHOCA4         BITMAP                  "res\\image\\chocalate\\choca4.bmp"
+IDB_RUSS_CHOCA5         BITMAP                  "res\\image\\chocalate\\choca5.bmp"
+IDB_RUSS_CHOCA6         BITMAP                  "res\\image\\chocalate\\choca6.bmp"
+IDB_RUSS_CHOCA7         BITMAP                  "res\\image\\chocalate\\choca7.bmp"
+IDB_RUSS_CHOCA8         BITMAP                  "res\\image\\chocalate\\choca8.bmp"
+IDB_RUSS_CHOCA9         BITMAP                  "res\\image\\chocalate\\choca9.bmp"
+IDB_RUSS_CHOCA10        BITMAP                  "res\\image\\chocalate\\choca10.bmp"
+IDB_RUSS_CHOCA11        BITMAP                  "res\\image\\chocalate\\choca11.bmp"
+IDB_RUSS_CHOCA12        BITMAP                  "res\\image\\chocalate\\choca12.bmp"
+IDB_RUSS_CHOCA13        BITMAP                  "res\\image\\chocalate\\choca13.bmp"
+IDB_RUSS_CHOCA14        BITMAP                  "res\\image\\chocalate\\choca14.bmp"
+IDB_RUSS_SWEETS1        BITMAP                  "res\\image\\sweet\\sweets1.bmp"
+IDB_RUSS_SWEETS2        BITMAP                  "res\\image\\sweet\\sweets2.bmp"
+IDB_RUSS_SWEETS3        BITMAP                  "res\\image\\sweet\\sweets3.bmp"
+IDB_RUSS_SWEETS4        BITMAP                  "res\\image\\sweet\\sweets4.bmp"
+IDB_RUSS_SWEETS5        BITMAP                  "res\\image\\sweet\\sweets5.bmp"
+IDB_RUSS_SWEETS6        BITMAP                  "res\\image\\sweet\\sweets6.bmp"
+IDB_RUSS_SWEETS7        BITMAP                  "res\\image\\sweet\\sweets7.bmp"
+IDB_RUSS_SWEETS8        BITMAP                  "res\\image\\sweet\\sweets8.bmp"
+IDB_RUSS_SWEETS9        BITMAP                  "res\\image\\sweet\\sweets9.bmp"
+IDB_RUSS_SWEETS10       BITMAP                  "res\\image\\sweet\\sweets10.bmp"
+IDB_RUSS_SWEETS12       BITMAP                  "res\\image\\sweet\\sweets11.bmp"
+IDB_RUSS_SWEETS13       BITMAP                  "res\\image\\sweet\\sweets13.bmp"
+IDB_RUSS_SWEETS15       BITMAP                  "res\\image\\sweet\\sweets15.bmp"
+IDB_RUSS_SWEETS14       BITMAP                  "res\\image\\sweet\\sweets14.bmp"
+IDB_RUSS_FRUIT1         BITMAP                  "res\\image\\fruit\\fruit01.bmp"
+IDB_RUSS_FRUIT2         BITMAP                  "res\\image\\fruit\\fruit02.bmp"
+IDB_RUSS_FRUIT3         BITMAP                  "res\\image\\fruit\\fruit03.bmp"
+IDB_RUSS_FRUIT4         BITMAP                  "res\\image\\fruit\\fruit04.bmp"
+IDB_RUSS_FRUIT5         BITMAP                  "res\\image\\fruit\\fruit05.bmp"
+IDB_RUSS_FRUIT6         BITMAP                  "res\\image\\fruit\\fruit06.bmp"
+IDB_RUSS_FRUIT7         BITMAP                  "res\\image\\fruit\\fruit07.bmp"
+IDB_RUSS_FRUIT8         BITMAP                  "res\\image\\fruit\\fruit08.bmp"
+IDB_RUSS_FRUIT9         BITMAP                  "res\\image\\fruit\\fruit09.bmp"
+IDB_RUSS_FRUIT10        BITMAP                  "res\\image\\fruit\\fruit10.bmp"
+IDB_RUSS_FRUIT11        BITMAP                  "res\\image\\fruit\\fruit11.bmp"
+IDB_RUSS_FRUIT12        BITMAP                  "res\\image\\fruit\\fruit12.bmp"
+IDB_RUSS_FRUIT13        BITMAP                  "res\\image\\fruit\\fruit13.bmp"
+IDB_RUSS_FRUIT14        BITMAP                  "res\\image\\fruit\\fruit14.bmp"
+IDB_RUSS_SWEETS11       BITMAP                  "res\\image\\bitmap43.bmp"
+IDB_RUSS_ANIMAL1        BITMAP                  "res\\image\\animal\\animal1.bmp"
+IDB_RUSS_ANIMAL2        BITMAP                  "res\\image\\animal\\animal2.bmp"
+IDB_RUSS_ANIMAL3        BITMAP                  "res\\image\\animal\\animal3.bmp"
+IDB_RUSS_ANIMAL4        BITMAP                  "res\\image\\animal\\animal4.bmp"
+IDB_RUSS_ANIMAL5        BITMAP                  "res\\image\\animal\\animal5.bmp"
+IDB_RUSS_ANIMAL6        BITMAP                  "res\\image\\animal\\animal6.bmp"
+IDB_RUSS_ANIMAL7        BITMAP                  "res\\image\\animal\\animal7.bmp"
+IDB_RUSS_HEART3         BITMAP                  "res\\image\\heart\\heart3.bmp"
+IDB_RUSS_HEART8         BITMAP                  "res\\image\\heart\\heart8.bmp"
+IDB_RUSS_HEART9         BITMAP                  "res\\image\\heart\\heart9.bmp"
+IDB_RUSS_HEART10        BITMAP                  "res\\image\\heart\\heart10.bmp"
+IDB_RUSS_HEART11        BITMAP                  "res\\image\\heart\\heart11.bmp"
+IDB_RUSS_HEART12        BITMAP                  "res\\image\\heart\\heart12.bmp"
+IDB_RUSS_HEART13        BITMAP                  "res\\image\\heart\\heart13.bmp"
+IDB_RUSS_HEART14        BITMAP                  "res\\image\\heart\\heart14.bmp"
+IDB_RUSS_HEART15        BITMAP                  "res\\image\\heart\\heart15.bmp"
+IDB_RUSS_BACK1          BITMAP                  "res\\image\\heart6.bmp"
+IDB_RUSS_MONEY1         BITMAP                  "res\\image\\money\\dollar100.bmp"
+IDB_RUSS_MONEY2         BITMAP                  "res\\image\\money\\dolar911.bmp"
+IDB_RUSS_MONEY3         BITMAP                  "res\\image\\money\\nihonnenn10000.bmp"
+IDB_RUSS_MONEY4         BITMAP                  "res\\image\\money\\europe200.bmp"
+IDB_RUSS_MONEY5         BITMAP                  "res\\image\\money\\roc200.bmp"
+IDB_RUSS_MONEY6         BITMAP                  "res\\image\\money\\prc10.bmp"
+IDB_RUSS_MONEY7         BITMAP                  "res\\image\\money\\dollar1.bmp"
+IDB_RUSS_BALL1          BITMAP                  "res\\image\\ball\\ball1.bmp"
+IDB_RUSS_BALL2          BITMAP                  "res\\image\\ball\\ball2.bmp"
+IDB_RUSS_BALL3          BITMAP                  "res\\image\\ball\\ball3.bmp"
+IDB_RUSS_BALL4          BITMAP                  "res\\image\\ball\\ball4.bmp"
+IDB_RUSS_BALL5          BITMAP                  "res\\image\\ball\\ball5.bmp"
+IDB_RUSS_BALL6          BITMAP                  "res\\image\\ball\\ball6.bmp"
+IDB_RUSS_BALL7          BITMAP                  "res\\image\\ball\\ball7.bmp"
+IDB_RUSS_BALL8          BITMAP                  "res\\image\\ball\\ball8.bmp"
+IDB_RUSS_SCORE_0        BITMAP                  "res\\image\\image\\image0.bmp"
+IDB_RUSS_SCORE_1        BITMAP                  "res\\image\\image\\image1.bmp"
+IDB_RUSS_SCORE_2        BITMAP                  "res\\image\\image\\image2.bmp"
+IDB_RUSS_SCORE_3        BITMAP                  "res\\image\\image\\image3.bmp"
+IDB_RUSS_SCORE_4        BITMAP                  "res\\image\\image\\image4.bmp"
+IDB_RUSS_SCORE_5        BITMAP                  "res\\image\\image\\image5.bmp"
+IDB_RUSS_SCORE_6        BITMAP                  "res\\image\\image\\image6.bmp"
+IDB_RUSS_SCORE_7        BITMAP                  "res\\image\\image\\image7.bmp"
+IDB_RUSS_SCORE_8        BITMAP                  "res\\image\\image\\image8.bmp"
+IDB_RUSS_SCORE_9        BITMAP                  "res\\image\\image\\image9.bmp"
+IDB_RUSS_SCORE_10       BITMAP                  "res\\image\\image\\image10.bmp"
+IDB_RUSS_SCORE_11       BITMAP                  "res\\image\\image\\image11.bmp"
+IDB_RUSS_SCORE_12       BITMAP                  "res\\image\\image\\image12.bmp"
+IDB_RUSS_SCORE_13       BITMAP                  "res\\image\\image\\image13.bmp"
+IDB_RUSS_SCORE_14       BITMAP                  "res\\image\\image\\image14.bmp"
+IDB_RUSS_SCORE_15       BITMAP                  "res\\image\\image\\image15.bmp"
+IDB_RUSS_SCORE_16       BITMAP                  "res\\image\\image\\image16.bmp"
+IDB_RUSS_SCORE_17       BITMAP                  "res\\image\\image\\image17.bmp"
+IDB_RUSS_SCORE_18       BITMAP                  "res\\image\\image\\image18.bmp"
+IDB_RUSS_SCORE_19       BITMAP                  "res\\image\\image\\image19.bmp"
+IDB_RUSS_SCORE_20       BITMAP                  "res\\image\\image\\image20.bmp"
+IDB_RUSS_SCORE_21       BITMAP                  "res\\image\\image\\image21.bmp"
+IDB_RUSS_SCORE_22       BITMAP                  "res\\image\\image\\image22.bmp"
+IDB_RUSS_SCORE_23       BITMAP                  "res\\image\\image\\image23.bmp"
+IDB_RUSS_SKIN1          BITMAP                  "res\\skin\\VFSH0009.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDR_WAVE_APPLAUSE1      WAVE                    "res\\sound\\applause_level1.wav"
+IDR_WAVE_APPLAUSE2      WAVE                    "res\\sound\\pmetmgpwkk.wav"
+IDR_WAVE_APPLAUSE3      WAVE                    "res\\sound\\07yd710g55.wav"
+IDR_WAVE_APPLAUSE4      WAVE                    "res\\sound\\applause_level4.wav"
+IDR_WAVE_CLEARROW       WAVE                    "res\\sound\\Windows XP Recycle.wav"
+IDR_WAVE_GAMEOVER       WAVE                    "res\\sound\\gameover.wav"
+IDR_WAVE_LEVELUP        WAVE                    "res\\sound\\Windows XP Hardware Fail.wav"
+IDR_WAVE_REBOTTOM       WAVE                    "res\\sound\\Windows XP Balloon.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// SKINMAGIC
+//
+
+IDR_SKIN_CORONA         SKINMAGIC               "res\\skin\\corona.smf"
+IDR_SKIN_DEVIOR         SKINMAGIC               "res\\skin\\Devior.smf"
+IDR_SKIN_XPSTEEL        SKINMAGIC               "res\\skin\\xpsteel.smf"
+IDR_SKIN_FUTURAIII      SKINMAGIC               "res\\skin\\futuraIII.smf"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+IDR_GIFBEAR             GIF                     "res\\icon\\gif1.bin"
+IDR_GIFTEMP             GIF                     "res\\icon\\gif2.bin"
+IDR_GIFRABBIT           GIF                     "res\\icon\\gif3.bin"
+IDR_GIFMOUSE            GIF                     "res\\icon\\gif4.bin"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "バージョン情報 Tetris(&A)..."
+END
+
+#endif    // Japanese resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE 17, 1
+#pragma code_page(932)
+#include "res\Tetris.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // 標準コンポーネント
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
